@@ -35,7 +35,7 @@ import os
 # 啟動瀏覽器工具的選項
 my_options = webdriver.ChromeOptions()
 my_options.add_argument("--start-maximized")         # 最大化視窗
-# my_options.add_argument("--incognito")               # 開啟無痕模式
+my_options.add_argument("--incognito")               # 開啟無痕模式
 my_options.add_argument("--disable-popup-blocking")  # 禁用彈出攔截
 my_options.add_argument("--disable-notifications")   # 取消通知
 my_options.add_argument(f'--user-agent={ua.random}') # (Optional)加入 User-Agent
