@@ -26,7 +26,7 @@ def get_IMDB_review(imdb_id):
     rating=[(item.select_one("span.rating-other-user-rating > span").text if len(item.select("span.rating-other-user-rating > span"))==2 else "") for item in soup.select(".lister-item-content") ]
     review = [item.select_one('.text').text for item in soup.select(".lister-item-content")]
 
-    # 第二波找LOADMORE資料
+    # 確認LOADMORE資料內容
     load_more = soup.select_one(".load-more-data")
     flag = True
     # 找到load_more tag, 才需要往下抓
